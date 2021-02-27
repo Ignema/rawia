@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body{
+    background-image: linear-gradient(rgb(247, 224, 232), rgb(226, 72, 126));
+}
+
+gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 310px);
+}
+
+.container{
+    margin: 1rem;
+    width: 300px;
+}
+
+img{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 1px 1px 11px;
+    transition: all .5s ease-in-out;
+    animation: slide 1.5s normal;
+}
+
+.container:hover img{
+    opacity: 0.8;
+    transform: scale(.8);      
+}
+.container:active img{
+    opacity: 0.8;
+    transform: scale(.8);      
+}
+
+@keyframes slide {
+    from{ transform: scale(0); }
+    to{ transform: scale(100%); }
+}
